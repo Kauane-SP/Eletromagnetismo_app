@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "533544969918",
+    "project_id": "eletromagnetismo-554a8",
+    "storage_bucket": "eletromagnetismo-554a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533544969918:android:5c02fe4464a39e6d2b60ef",
+        "android_client_info": {
+          "package_name": "com.example.eletromagnetismo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533544969918-n0sej9n8f4vvksbljg6if0052v8jrrej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVVo_4KnGG8Jv8x6sZpqBOpjsYEYrc6OQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533544969918-n0sej9n8f4vvksbljg6if0052v8jrrej.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
