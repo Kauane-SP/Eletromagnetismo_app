@@ -9,6 +9,10 @@ import com.example.eletromagnetismo.R
 
 class Home : Fragment() {
 
+    companion object {
+        fun newInstance() = Home()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
