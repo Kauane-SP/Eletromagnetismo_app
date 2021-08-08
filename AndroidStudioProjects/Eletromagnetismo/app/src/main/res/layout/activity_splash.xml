@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#111111"
     tools:context=".view.Splash">
+
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_title_splash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tv_title_splash"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@id/pb_loading_splash"
         app:layout_constraintEnd_toEndOf="parent"

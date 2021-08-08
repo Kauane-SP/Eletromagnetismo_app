@@ -7,9 +7,9 @@
 
     <activity
         android:id="@+id/splash"
-        android:name="com.example.eletromagnetismo.view.Splash"
+        android:name="com.example.eletromagnetismo.view.Slids"
         android:label="activity_splash"
-        tools:layout="@layout/activity_splash" />
+        tools:layout="@layout/activity_slids" />
     <activity
         android:id="@+id/mainActivity"
         android:name="com.example.eletromagnetismo.view.MainActivity"
