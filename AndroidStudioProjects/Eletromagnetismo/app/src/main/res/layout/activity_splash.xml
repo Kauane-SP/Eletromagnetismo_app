@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".view.Splash">
 
 
@@ -30,8 +31,10 @@
     <ProgressBar
         android:id="@+id/pb_loading_splash"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:progressTint="@color/rosa"
+        android:progressBackgroundTint="@color/rosa"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_20dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="40dp"
