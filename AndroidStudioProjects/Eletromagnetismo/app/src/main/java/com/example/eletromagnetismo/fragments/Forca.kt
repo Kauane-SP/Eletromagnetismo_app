@@ -9,6 +9,10 @@ import com.example.eletromagnetismo.R
 
 class Forca : Fragment() {
 
+    companion object {
+        fun newInstance() = Forca()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

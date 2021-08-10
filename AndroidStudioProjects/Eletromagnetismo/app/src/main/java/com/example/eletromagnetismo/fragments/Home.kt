@@ -11,11 +11,13 @@ import com.example.eletromagnetismo.R
 
 class Home : Fragment() {
 
+    private lateinit var contentForca: ConstraintLayout
+    private lateinit var contentVetor: ConstraintLayout
+
     companion object {
         fun newInstance() = Home()
     }
 
-    private lateinit var contentForce: ConstraintLayout
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,13 +29,31 @@ class Home : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val context = activity as Context
+        initView(view)
+        eventListener()
 
-        contentForce = view.findViewById(R.id.content_force)
-        contentForce.setOnClickListener {
+    }
 
+    private fun eventListener() {
+        contentForca.setOnClickListener {
+            parentFragmentManager.beginTransaction().apply {
+                replace(R.id.content_main, Forca.newInstance())
+                commit()
+            }
+        }
+
+        contentVetor.setOnClickListener {
+            parentFragmentManager.beginTransaction().apply {
+                replace(R.id.content_main, Vetor.newInstance())
+                commit()
+            }
         }
     }
 
+    private fun initView(view: View) {
+        contentForca = view.findViewById(R.id.content_force)
+        contentVetor = view.findViewById(R.id.content_vector)
+    }
 
 
 }

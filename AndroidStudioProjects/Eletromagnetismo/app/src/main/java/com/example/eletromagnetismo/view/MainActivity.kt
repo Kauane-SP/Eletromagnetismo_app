@@ -76,5 +76,5 @@ class MainActivity : AppCompatActivity() {
             .replace(id.content_main, fragment)
             .commit()
     }
-    
+
 }
