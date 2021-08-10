@@ -23,5 +23,14 @@
         <action
             android:id="@+id/action_home2_to_mainActivity"
             app:destination="@id/mainActivity" />
+        <action
+            android:id="@+id/action_home2_to_forca"
+            app:destination="@id/forca" />
+    </fragment>
+    <fragment
+        android:id="@+id/forca"
+        android:name="com.example.eletromagnetismo.fragments.Forca"
+        android:label="fragment_forca"
+        tools:layout="@layout/fragment_forca" >
     </fragment>
 </navigation>
