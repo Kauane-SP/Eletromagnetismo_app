@@ -14,6 +14,7 @@ import coil.load
 import com.example.eletromagnetismo.R
 import com.example.eletromagnetismo.utils.constants.ConstantsPreferences
 import com.example.eletromagnetismo.utils.sessionManagement.SessionManagment
+import com.example.eletromagnetismo.view.MainActivity
 import com.example.eletromagnetismo.view.Slids
 
 class SetUserFragment : Fragment() {
@@ -38,30 +39,36 @@ class SetUserFragment : Fragment() {
         setUserInfo = SessionManagment(context)
 
         initView(view)
+        eventCheckBox()
         eventBtnListener(context)
     }
 
-    private fun eventCheckBox(context:Context) {
-        if (checkAluno.isChecked){
-            imgUser.load(R.drawable.ic_book)
-            setUserInfo.initializeSession(ConstantsPreferences.ALUNO.toString())
-            changeFragment(context)
-        }else if(checkProfessor.isChecked){
-            imgUser.load(R.drawable.ic_calculator)
-            setUserInfo.initializeSession(ConstantsPreferences.PROFESSOR.toString())
-            changeFragment(context)
+    private fun eventCheckBox() {
+        checkAluno.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (buttonView.isChecked){
+                imgUser.load(R.drawable.ic_book)
+                setUserInfo.initializeSession(ConstantsPreferences.ALUNO.toString())
+                checkProfessor.isChecked = false
+            }
+        }
+
+        checkProfessor.setOnCheckedChangeListener { buttonView, isChecked ->
+            if(buttonView.isChecked){
+                imgUser.load(R.drawable.ic_calculator)
+                setUserInfo.initializeSession(ConstantsPreferences.PROFESSOR.toString())
+                checkAluno.isChecked = false
+            }
         }
     }
 
     private fun eventBtnListener(context:Context) {
         btnInit.setOnClickListener {
-            eventCheckBox(context)
+            changeFragment(context)
         }
     }
 
     private fun changeFragment(context:Context) {
-        startActivity(Intent(context, Slids::class.java))
-        parentFragmentManager.beginTransaction().remove(this)
+        startActivity(Intent(context, MainActivity::class.java))
     }
 
     private fun initView(view: View) {
@@ -69,5 +76,9 @@ class SetUserFragment : Fragment() {
         checkProfessor = view.findViewById(R.id.check_professor)
         btnInit = view.findViewById(R.id.btn_init)
         imgUser = view.findViewById(R.id.img_user)
+    }
+
+    companion object {
+        fun newInstance() = SetUserFragment()
     }
 }

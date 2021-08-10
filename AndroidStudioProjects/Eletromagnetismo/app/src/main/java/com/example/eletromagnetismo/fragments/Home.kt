@@ -6,15 +6,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.eletromagnetismo.R
-import com.example.eletromagnetismo.utils.sessionManagement.SessionManagment
 
 class Home : Fragment() {
 
-    private lateinit var sessionVerifyer: SessionManagment
-    private lateinit var navController: NavController
+    companion object {
+        fun newInstance() = Home()
+    }
+
+    private lateinit var contentForce: ConstraintLayout
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,16 +27,13 @@ class Home : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val context = activity as Context
-        sessionVerifyer = SessionManagment(context)
-        navController = Navigation.findNavController(view)
 
-        verifySecssion()
-    }
+        contentForce = view.findViewById(R.id.content_force)
+        contentForce.setOnClickListener {
 
-    private fun verifySecssion() {
-        if (!sessionVerifyer.getInfoSession()){
-            navController.navigate(R.id.action_home_to_setUserFragmetn)
         }
     }
+
+
 
 }

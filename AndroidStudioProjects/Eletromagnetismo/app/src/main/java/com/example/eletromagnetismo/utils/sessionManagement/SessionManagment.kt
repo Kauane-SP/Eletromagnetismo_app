@@ -16,6 +16,11 @@ class SessionManagment(val context: Context) {
         mSharedPreferences.storeString(KEY_USER_NAME, nome)
     }
 
+    fun finishSession(){
+        mSharedPreferences.storeSessionInfo(KEY_SESSION_INFO, false)
+        mSharedPreferences.storeString(KEY_USER_NAME, "")
+    }
+
     fun getInfoUser():String {
         return mSharedPreferences.getString(KEY_USER_NAME)
     }

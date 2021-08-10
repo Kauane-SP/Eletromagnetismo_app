@@ -21,7 +21,7 @@ class Splash : AppCompatActivity() {
             progressBar = findViewById(R.id.pb_loading_splash)
             progressBar.progress = 70
             progressBar.max = 100
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, FirstActivity::class.java)
             startActivity(intent)
             finish()
         }, 3000)

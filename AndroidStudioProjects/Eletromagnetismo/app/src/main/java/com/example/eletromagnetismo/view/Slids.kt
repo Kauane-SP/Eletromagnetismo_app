@@ -1,21 +1,21 @@
 package com.example.eletromagnetismo.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.eletromagnetismo.R
+import com.example.eletromagnetismo.fragments.SetUserFragment
 import com.heinrichreimersoftware.materialintro.app.IntroActivity
 import com.heinrichreimersoftware.materialintro.slide.SimpleSlide
 
 class Slids : IntroActivity() {
 
-    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         isButtonBackVisible = false
         isButtonNextVisible = false
-//        navController = Navigation.findNavController(view)
 
         addSlide(
             SimpleSlide.Builder()
@@ -38,9 +38,5 @@ class Slids : IntroActivity() {
                 .scrollable(false)
                 .build()
         )
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
     }
 }
