@@ -4,4 +4,11 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tv_title_splash">Eletromag</string>
     <string name="loren">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime</string>
+    <string name="bt_logout">logout</string>
+    <string name="tv_sub_title_header">Escolha uma opção</string>
+    <string name="bt_calcular">calcular</string>
+    <string name="tv_check_type_aluno">Aluno</string>
+    <string name="tv_check_type_professor">Professor</string>
+    <string name="bt_start_home">avançar</string>
+    <string name="tv_informative">Escolha uma modalidade para avançar</string>
 </resources>
