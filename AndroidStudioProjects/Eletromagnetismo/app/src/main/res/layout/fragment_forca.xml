@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="#fffafa"
     tools:context=".fragments.Forca">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,7 +34,7 @@
             android:id="@+id/text_carga_eletrica"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" q "
+            android:hint="q"
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -51,13 +52,13 @@
             app:layout_constraintStart_toEndOf="@id/text_carga_eletrica"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatEditText
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/text_potencia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" 19 "
+            android:text=" -19 "
             android:textColor="@color/black"
-            android:textSize="12sp"
+            android:textSize="13sp"
             app:layout_constraintBottom_toTopOf="@id/text_multipicaca_value"
             app:layout_constraintStart_toEndOf="@id/text_multipicaca_value" />
 
@@ -78,7 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text=" v "
+            android:hint=" v "
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -100,7 +101,7 @@
             android:id="@+id/text_potencia_vetorial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" 19 "
+            android:hint=" 19 "
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintBottom_toTopOf="@id/text_multipicaca_value_vetorial"
@@ -123,7 +124,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text=" b "
+            android:hint=" b "
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -145,7 +146,7 @@
             android:id="@+id/text_potencia_campo_vetorial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" 19 "
+            android:hint=" 19 "
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintBottom_toTopOf="@id/text_multipicaca_campo_vetorial"

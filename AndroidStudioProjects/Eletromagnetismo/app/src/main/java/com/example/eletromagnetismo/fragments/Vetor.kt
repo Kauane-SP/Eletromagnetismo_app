@@ -9,6 +9,10 @@ import com.example.eletromagnetismo.R
 
 class Vetor : Fragment() {
 
+    companion object {
+        fun newInstance() = Vetor()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
