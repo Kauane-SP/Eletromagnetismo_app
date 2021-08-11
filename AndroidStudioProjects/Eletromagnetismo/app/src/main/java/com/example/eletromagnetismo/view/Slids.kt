@@ -11,7 +11,6 @@ import com.heinrichreimersoftware.materialintro.slide.SimpleSlide
 
 class Slids : IntroActivity() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         isButtonBackVisible = false

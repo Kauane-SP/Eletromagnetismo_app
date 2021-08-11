@@ -70,6 +70,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onBackPressed() {
+
+    }
+
     private fun addFragment(fragment: Fragment) {
         supportFragmentManager
             .beginTransaction()

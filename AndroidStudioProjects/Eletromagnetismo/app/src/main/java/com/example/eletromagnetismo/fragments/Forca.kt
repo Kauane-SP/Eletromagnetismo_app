@@ -9,6 +9,8 @@ import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.fragment.app.Fragment
 import com.example.eletromagnetismo.R
+import com.example.eletromagnetismo.usecase.forca.ForcaUseCaseImpl
+import java.math.RoundingMode
 import kotlin.math.pow
 
 class Forca : Fragment() {
@@ -16,6 +18,8 @@ class Forca : Fragment() {
     companion object {
         fun newInstance() = Forca()
     }
+
+    private var useCase:ForcaUseCaseImpl= ForcaUseCaseImpl()
 
     private lateinit var cargaEletrica: AppCompatEditText
     private lateinit var produtoVetorial: AppCompatEditText
@@ -34,7 +38,7 @@ class Forca : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        requireActivity().onBackPressed()
         initView(view)
         eventListener()
     }
@@ -47,10 +51,8 @@ class Forca : Fragment() {
             val pv = potencialProdutoVetorial.text.toString()
             val b = campoEletrico.text.toString()
             val pb = potencialCampoEletrico.text.toString()
-            val operation =((q.toDouble())* 10.0.pow(pq.toDouble())) * (v.toDouble() * b.toDouble()) * 10.0.pow(
-                pv.toDouble() + pb.toDouble()
-            )
-            result.text = operation.toString()
+
+            result.text = useCase.calcularForca(q,pq,v,pv,b,pb).toString().replace("E",".10^")
         }
     }
 

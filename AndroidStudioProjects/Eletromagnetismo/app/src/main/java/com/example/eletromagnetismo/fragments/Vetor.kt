@@ -9,8 +9,11 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.AppCompatTextView
 import com.example.eletromagnetismo.R
+import com.example.eletromagnetismo.usecase.vetor.VetorUseCaseImpl
 
 class Vetor : Fragment() {
+
+    private val useCase = VetorUseCaseImpl()
 
     private lateinit var q: AppCompatEditText
     private lateinit var vx: AppCompatEditText
@@ -37,6 +40,8 @@ class Vetor : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initView(view)
 
+        requireActivity().onBackPressed()
+
         btnCalculate.setOnClickListener {
             val carga = q.text.toString().toDouble()
             val _vx = vx.text.toString().toDouble()
@@ -45,11 +50,16 @@ class Vetor : Fragment() {
             val _bx = bx.text.toString().toDouble()
             val _by = by.text.toString().toDouble()
             val _bz = bz.text.toString().toDouble()
-            val operation =
-                (((_vx * _bz) - (_vz * _by)) * carga).toString() + " i " +
-                        (((_vz * _bx) - (_vx * _bz)) * carga).toString() + " j " +
-                        (((_vx * _by) - (_vy * _bx)) * carga).toString() + " k "
-            result.text = operation
+
+            result.text = useCase.calcularVetor(
+                carga,
+                _vx,
+                _vy,
+                _vz,
+                _bx,
+                _by,
+                _bz
+            ).replace("E",".10^")
         }
     }
 
