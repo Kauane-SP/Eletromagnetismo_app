@@ -11,4 +11,6 @@
     <string name="tv_check_type_professor">Professor</string>
     <string name="bt_start_home">avançar</string>
     <string name="tv_informative">Escolha uma modalidade para avançar</string>
+    <string name="tv_vector_calculator">Vetor: Fm = q . vetor</string>
+    <string name="tv_foce_calculator">Força magnetica: Fm = q . v . b</string>
 </resources>
