@@ -46,7 +46,7 @@ class SetUserFragment : Fragment() {
     private fun eventCheckBox() {
         checkAluno.setOnCheckedChangeListener { buttonView, isChecked ->
             if (buttonView.isChecked){
-                imgUser.load(R.drawable.ic_book)
+                imgUser.load(R.drawable.ic_student)
                 setUserInfo.initializeSession(ConstantsPreferences.ALUNO.toString())
                 checkProfessor.isChecked = false
             }
@@ -54,7 +54,7 @@ class SetUserFragment : Fragment() {
 
         checkProfessor.setOnCheckedChangeListener { buttonView, isChecked ->
             if(buttonView.isChecked){
-                imgUser.load(R.drawable.ic_calculator)
+                imgUser.load(R.drawable.ic_teacher)
                 setUserInfo.initializeSession(ConstantsPreferences.PROFESSOR.toString())
                 checkAluno.isChecked = false
             }
