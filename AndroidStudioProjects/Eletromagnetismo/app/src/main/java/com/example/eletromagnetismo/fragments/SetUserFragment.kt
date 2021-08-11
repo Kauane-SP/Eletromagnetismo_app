@@ -41,6 +41,13 @@ class SetUserFragment : Fragment() {
         initView(view)
         eventCheckBox()
         eventBtnListener(context)
+        initializeCheckbox()
+    }
+
+    private fun initializeCheckbox() {
+        checkAluno.isChecked = true
+        imgUser.load(R.drawable.ic_student)
+        checkProfessor.isChecked = false
     }
 
     private fun eventCheckBox() {
