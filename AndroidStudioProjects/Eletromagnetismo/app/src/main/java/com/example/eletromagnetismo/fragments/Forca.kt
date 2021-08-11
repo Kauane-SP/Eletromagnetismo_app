@@ -1,14 +1,15 @@
 package com.example.eletromagnetismo.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.AppCompatTextView
+import androidx.fragment.app.Fragment
 import com.example.eletromagnetismo.R
+import kotlin.math.pow
 
 class Forca : Fragment() {
 
@@ -40,7 +41,16 @@ class Forca : Fragment() {
 
     private fun eventListener() {
         btnCalcular.setOnClickListener {
-
+            val q = cargaEletrica.text.toString()
+            val pq = -19
+            val v = produtoVetorial.text.toString()
+            val pv = potencialProdutoVetorial.text.toString()
+            val b = campoEletrico.text.toString()
+            val pb = potencialCampoEletrico.text.toString()
+            val operation =((q.toDouble())* 10.0.pow(pq.toDouble())) * (v.toDouble() * b.toDouble()) * 10.0.pow(
+                pv.toDouble() + pb.toDouble()
+            )
+            result.text = operation.toString()
         }
     }
 
