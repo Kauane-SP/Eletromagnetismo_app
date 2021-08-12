@@ -45,13 +45,13 @@ class Vetor : Fragment() {
         requireActivity().onBackPressed()
 
         btnCalculate.setOnClickListener {
-            val carga = q.text.toString().toDouble()
-            val _vx = vx.text.toString().toDouble()
-            val _vy = vy.text.toString().toDouble()
-            val _vz = vz.text.toString().toDouble()
-            val _bx = bx.text.toString().toDouble()
-            val _by = by.text.toString().toDouble()
-            val _bz = bz.text.toString().toDouble()
+            val carga = q.text.toString()
+            val _vx = vx.text.toString()
+            val _vy = vy.text.toString()
+            val _vz = vz.text.toString()
+            val _bx = bx.text.toString()
+            val _by = by.text.toString()
+            val _bz = bz.text.toString()
 
             if(VerifyFields.fieldsVetorEmpity(carga,_vx, _vy, _vz, _bx, _by, _bz)){
                 result.text = useCase.calcularVetor(

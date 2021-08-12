@@ -21,22 +21,22 @@ object VerifyFields{
     }
 
     fun fieldsVetorEmpity(
-        carga: Double,
-        _vx: Double,
-        _vy: Double,
-        _vz: Double,
-        _bx: Double,
-        _by: Double,
-        _bz: Double
+        carga: String,
+        _vx: String,
+        _vy: String,
+        _vz: String,
+        _bx: String,
+        _by: String,
+        _bz: String
     ):Boolean{
         return (
-                carga.toString().isNotEmpty() &&
-                _vx.toString().isNotEmpty() &&
-                _vy.toString().isNotEmpty() &&
-                _vz.toString().isNotEmpty() &&
-                _bx.toString().isNotEmpty() &&
-                _by.toString().isNotEmpty() &&
-                _bz.toString().isNotEmpty()
+                carga.isNotEmpty() &&
+                _vx.isNotEmpty() &&
+                _vy.isNotEmpty() &&
+                _vz.isNotEmpty() &&
+                _bx.isNotEmpty() &&
+                _by.isNotEmpty() &&
+                _bz.isNotEmpty()
                 )
     }
 }
