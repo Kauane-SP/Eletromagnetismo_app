@@ -4,84 +4,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fffafa"
+    android:background="@color/purple"
     tools:context=".fragments.SetUserFragmetn">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/content_image"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/azul"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <CheckBox
-                android:id="@+id/check_aluno"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="@drawable/custom_checkbox"
-                android:text="@string/tv_check_type_aluno"
-                android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <CheckBox
-                android:id="@+id/check_professor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_20dp"
-                android:layout_marginTop="5dp"
-                android:backgroundTint="@drawable/custom_checkbox"
-                android:text="@string/tv_check_type_professor"
-                android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/check_aluno" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_init"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:layout_marginTop="@dimen/_20dp"
-                android:layout_marginEnd="@dimen/_20dp"
-                android:layout_marginBottom="@dimen/_20dp"
-                android:background="@drawable/shape_bottom_back"
-                android:text="@string/bt_start_home"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/check_professor" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent"
+        android:background="@color/purple">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/img_user"
             android:layout_width="wrap_content"
             android:layout_height="350dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="50dp"
             android:layout_marginBottom="@dimen/_20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/content_image"
-            tools:src="@drawable/ic_book" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_teacher" />
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_fragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_20dp"
             android:layout_marginBottom="@dimen/_20dp"
+            android:layout_marginTop="50dp"
+            android:text="Estamos quase lá !"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_user" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_sub_title_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginBottom="@dimen/_20dp"
             android:text="@string/tv_informative"
-            android:textColor="@color/black"
+            android:textColor="#fafafa"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_fragment" />
+
+        <CheckBox
+            android:id="@+id/check_aluno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@drawable/custom_checkbox"
+            android:text="@string/tv_check_type_aluno"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_sub_title_fragment" />
+
+        <CheckBox
+            android:id="@+id/check_professor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@drawable/custom_checkbox"
+            android:text="@string/tv_check_type_professor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/check_aluno"
+            app:layout_constraintStart_toEndOf="@id/check_aluno"
+            app:layout_constraintTop_toTopOf="@id/check_aluno" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_init"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:background="@drawable/shape_bottom_back"
+            android:text="@string/bt_start_home"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/check_professor" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
