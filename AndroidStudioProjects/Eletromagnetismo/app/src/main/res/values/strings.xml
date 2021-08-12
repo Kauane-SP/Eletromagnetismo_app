@@ -13,4 +13,6 @@
     <string name="tv_informative">Escolha uma modalidade para avançar</string>
     <string name="tv_vector_calculator">Vetor: Fm = q . vetor</string>
     <string name="tv_foce_calculator">Força magnetica: Fm = q . v . b</string>
+    <string name="alert_empity_field">Campo marcado vazio</string>
+    <string name="alert_not_a_number">Campo com letra</string>
 </resources>

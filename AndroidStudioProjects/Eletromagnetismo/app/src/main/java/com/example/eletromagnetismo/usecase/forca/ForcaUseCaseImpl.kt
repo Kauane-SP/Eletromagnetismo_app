@@ -11,7 +11,6 @@ class ForcaUseCaseImpl : ForcaUseCase {
         b: String,
         pb: String
     ) :Double {
-        return ((q.toDouble())* 10.0.pow(pq.toDouble())) * (v.toDouble() * b.toDouble()) * 10.0.pow(
-            pv.toDouble() + pb.toDouble())
+        return ((q.toDouble())* 10.0.pow(pq.toDouble())) * (v.toDouble() * b.toDouble()) * 10.0.pow(pv.toDouble() + pb.toDouble())
     }
 }

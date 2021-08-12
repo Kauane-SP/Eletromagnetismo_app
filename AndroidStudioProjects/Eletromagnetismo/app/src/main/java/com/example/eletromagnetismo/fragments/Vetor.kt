@@ -10,6 +10,7 @@ import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.AppCompatTextView
 import com.example.eletromagnetismo.R
 import com.example.eletromagnetismo.usecase.vetor.VetorUseCaseImpl
+import com.example.eletromagnetismo.utils.VerifyFields
 
 class Vetor : Fragment() {
 
@@ -24,6 +25,7 @@ class Vetor : Fragment() {
     private lateinit var bz: AppCompatEditText
     private lateinit var result: AppCompatTextView
     private lateinit var btnCalculate: AppCompatButton
+    private lateinit var txtAlert: AppCompatTextView
 
     companion object {
         fun newInstance() = Vetor()
@@ -51,15 +53,19 @@ class Vetor : Fragment() {
             val _by = by.text.toString().toDouble()
             val _bz = bz.text.toString().toDouble()
 
-            result.text = useCase.calcularVetor(
-                carga,
-                _vx,
-                _vy,
-                _vz,
-                _bx,
-                _by,
-                _bz
-            ).replace("E",".10^")
+            if(VerifyFields.fieldsVetorEmpity(carga,_vx, _vy, _vz, _bx, _by, _bz)){
+                result.text = useCase.calcularVetor(
+                    carga,
+                    _vx,
+                    _vy,
+                    _vz,
+                    _bx,
+                    _by,
+                    _bz
+                ).replace("E",".10^")
+            }else{
+                txtAlert.text = getString(R.string.alert_empity_field)
+            }
         }
     }
 
@@ -73,6 +79,7 @@ class Vetor : Fragment() {
         bz = view.findViewById(R.id.text_vecto_three_b)
         result = view.findViewById(R.id.tv_result_vector)
         btnCalculate = view.findViewById(R.id.bottom_calculate_vector)
+        txtAlert = view.findViewById(R.id.txt_alert_vector)
     }
 
 

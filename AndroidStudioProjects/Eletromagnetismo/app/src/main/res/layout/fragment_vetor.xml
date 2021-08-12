@@ -36,6 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint=" q "
+            android:inputType="numberDecimal"
             android:textColorHint="@color/black"
             android:background="@color/rosa"
             android:textColor="@color/black"
@@ -58,6 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint=" vx "
+            android:inputType="numberDecimal"
             android:textColorHint="@color/black"
             android:background="@color/rosa"
             android:textColor="@color/black"
@@ -92,6 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:hint=" vy "
+            android:inputType="numberDecimal"
             android:textColorHint="@color/black"
             android:background="@color/rosa"
             android:textColor="@color/black"
@@ -126,6 +129,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:hint=" vz "
+            android:inputType="numberDecimal"
             android:textColorHint="@color/black"
             android:background="@color/rosa"
             android:textColor="@color/black"
@@ -148,6 +152,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint=" bx "
+            android:inputType="numberDecimal"
             android:textColorHint="@color/black"
             android:background="@color/rosa"
             android:textColor="@color/black"
@@ -185,6 +190,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:hint=" by "
+            android:inputType="numberDecimal"
             android:textColorHint="@color/black"
             android:background="@color/rosa"
             android:textColor="@color/black"
@@ -222,6 +228,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:hint=" bz "
+            android:inputType="numberDecimal"
             android:textColorHint="@color/black"
             android:background="@color/rosa"
             android:textColor="@color/black"
@@ -256,6 +263,16 @@
             tools:text="Resposta 10" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_alert_vector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        app:layout_constraintTop_toBottomOf="@+id/content_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bottom_calculate_vector"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_calculate_vector"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bottom_calculate_vector"

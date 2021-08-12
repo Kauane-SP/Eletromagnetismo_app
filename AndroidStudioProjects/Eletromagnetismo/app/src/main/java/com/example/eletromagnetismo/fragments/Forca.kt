@@ -10,8 +10,7 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.fragment.app.Fragment
 import com.example.eletromagnetismo.R
 import com.example.eletromagnetismo.usecase.forca.ForcaUseCaseImpl
-import java.math.RoundingMode
-import kotlin.math.pow
+import com.example.eletromagnetismo.utils.VerifyFields
 
 class Forca : Fragment() {
 
@@ -28,6 +27,7 @@ class Forca : Fragment() {
     private lateinit var potencialCampoEletrico: AppCompatEditText
     private lateinit var result: AppCompatTextView
     private lateinit var btnCalcular: AppCompatButton
+    private lateinit var txtAlert: AppCompatTextView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -52,8 +52,13 @@ class Forca : Fragment() {
             val b = campoEletrico.text.toString()
             val pb = potencialCampoEletrico.text.toString()
 
-            result.text = useCase.calcularForca(q,pq,v,pv,b,pb).toString().replace("E",".10^")
+            if(VerifyFields.fieldsForcaEmpity(q,pq,v,pv,b,pb)){
+                result.text = useCase.calcularForca(q,pq,v,pv,b,pb).toString().replace("E",".10^")
+            }else{
+                txtAlert.text = getString(R.string.alert_empity_field)
+            }
         }
+
     }
 
     private fun initView(view: View) {
@@ -64,5 +69,6 @@ class Forca : Fragment() {
         potencialCampoEletrico = view.findViewById(R.id.text_potencia_campo_vetorial)
         result = view.findViewById(R.id.tv_result)
         btnCalcular = view.findViewById(R.id.bottom_calculate)
+        txtAlert = view.findViewById(R.id.tv_alert)
     }
 }
