@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:background="#fffafa"
+    android:padding="16dp"
     tools:context=".fragments.Forca">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/content_edit"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="150dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/shape_component_home"
+        android:background="@drawable/shape_display"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -23,9 +23,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="Fm = "
+            android:text=" Fm = "
             android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textSize="@dimen/_20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -34,12 +34,12 @@
             android:id="@+id/text_carga_eletrica"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="q"
-            android:inputType="numberDecimal"
-            android:textColorHint="@color/black"
-            android:background="@color/rosa"
+            android:background="@color/orange"
+            android:hint="@string/tv_q"
+            android:lineSpacingExtra="@dimen/_20dp"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textColorHint="@color/black"
+            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/tv_force"
             app:layout_constraintTop_toTopOf="parent" />
@@ -48,7 +48,7 @@
             android:id="@+id/text_multipicaca_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" .10 "
+            android:text="@string/tv_10"
             android:textColor="@color/black"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -59,7 +59,7 @@
             android:id="@+id/text_potencia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" -19 "
+            android:text="@string/tv_19"
             android:textColor="@color/black"
             android:textSize="13sp"
             app:layout_constraintBottom_toTopOf="@id/text_multipicaca_value"
@@ -70,9 +70,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:text=" x "
+            android:text="@string/tv_x_multiplicator"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/text_multipicaca_value"
             app:layout_constraintTop_toTopOf="parent" />
@@ -82,12 +82,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:hint=" v "
-            android:inputType="numberDecimal"
-            android:textColorHint="@color/black"
-            android:background="@color/rosa"
+            android:background="@color/orange"
+            android:hint="@string/tv_v"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textColorHint="@color/black"
+            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/text_multipicaca"
             app:layout_constraintTop_toTopOf="parent" />
@@ -96,7 +95,7 @@
             android:id="@+id/text_multipicaca_value_vetorial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" .10 "
+            android:text="@string/tv_10_twoo_multuplicator"
             android:textColor="@color/black"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -107,47 +106,34 @@
             android:id="@+id/text_potencia_vetorial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/orange"
             android:hint=" 19 "
             android:inputType="numberDecimal"
-            android:textColorHint="@color/black"
-            android:background="@color/rosa"
             android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:textSize="12sp"
             app:layout_constraintBottom_toTopOf="@id/text_multipicaca_value_vetorial"
             app:layout_constraintStart_toEndOf="@id/text_multipicaca_value_vetorial" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/text_multipicaca_campo_magnetico"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:text=" x "
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/text_multipicaca_value_vetorial"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/text_campo_cetorial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:background="@color/orange"
             android:hint=" b "
-            android:inputType="numberDecimal"
-            android:textColorHint="@color/black"
-            android:background="@color/rosa"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textColorHint="@color/black"
+            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/text_multipicaca_campo_magnetico"
+            app:layout_constraintStart_toEndOf="@id/text_potencia_vetorial"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/text_multipicaca_campo_vetorial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" .10 "
+            android:text="@string/tv_10"
             android:textColor="@color/black"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -158,27 +144,14 @@
             android:id="@+id/text_potencia_campo_vetorial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/orange"
             android:hint=" 19 "
             android:inputType="numberDecimal"
-            android:textColorHint="@color/black"
-            android:background="@color/rosa"
             android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:textSize="12sp"
             app:layout_constraintBottom_toTopOf="@id/text_multipicaca_campo_vetorial"
             app:layout_constraintStart_toEndOf="@id/text_multipicaca_campo_vetorial" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            tools:text="Resposta 10"
-            android:layout_marginStart="10dp"
-            android:textColor="@color/black"
-            app:layout_constraintTop_toBottomOf="@id/tv_force"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -187,11 +160,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:lines="2"
-        app:layout_constraintTop_toBottomOf="@+id/content_edit"
+        android:textColor="@color/orange"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_calculate"
         app:layout_constraintEnd_toStartOf="@+id/bottom_calculate"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/bottom_calculate"/>
-
+        app:layout_constraintTop_toBottomOf="@+id/content_edit" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bottom_calculate"
@@ -203,14 +176,43 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/content_edit" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/loren"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_result"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:background="@drawable/shape_component_home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/content_edit" />
+        app:layout_constraintTop_toBottomOf="@id/bottom_calculate">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_result_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/result" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_result_title"
+            tools:text="Resposta 10" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

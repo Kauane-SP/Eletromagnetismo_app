@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:background="#fffafa"
+    android:padding="6dp"
     tools:context=".fragments.Vetor">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/content_edit"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:padding="@dimen/_20dp"
-        android:background="@drawable/shape_component_home"
+        android:layout_height="150dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shape_display"
+        android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -24,8 +24,9 @@
             android:id="@+id/tv_vector"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="Vetor = "
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="Fm= "
             android:textColor="@color/black"
             android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -35,46 +36,93 @@
             android:id="@+id/text_const"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@color/orange"
             android:hint=" q "
-            android:inputType="numberDecimal"
-            android:textColorHint="@color/black"
-            android:background="@color/rosa"
             android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@id/tv_vector"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_potencia_q"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_10"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/text_const"
+            app:layout_constraintStart_toEndOf="@id/text_const"
+            app:layout_constraintTop_toTopOf="@id/text_const" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/tv_potencia_q_elevation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/orange"
+            android:hint=" x "
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_potencia_q"
+            app:layout_constraintStart_toEndOf="@id/tv_potencia_q" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_const_multiplicacao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="@dimen/_20dp"
             android:text=" X ( "
             android:textColor="@color/black"
-            android:textSize="15sp"
-            app:layout_constraintStart_toEndOf="@id/text_const"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/tv_potencia_q"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/text_vector_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@color/orange"
             android:hint=" vx "
-            android:inputType="numberDecimal"
-            android:textColorHint="@color/black"
-            android:background="@color/rosa"
             android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@id/tv_const_multiplicacao"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_potencia_vx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_10"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/text_vector_one"
+            app:layout_constraintStart_toEndOf="@id/text_vector_one"
+            app:layout_constraintTop_toTopOf="@id/text_vector_one" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/tv_potencia_vx_elevation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/orange"
+            android:hint=" x "
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_potencia_vx"
+            app:layout_constraintStart_toEndOf="@id/tv_potencia_vx" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/const_i"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
             android:text=" i "
             android:textColor="@color/black"
             android:textSize="15sp"
-            app:layout_constraintStart_toEndOf="@id/text_vector_one"
+            app:layout_constraintStart_toEndOf="@id/tv_potencia_vx"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -82,9 +130,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/_20dp"
             android:text=" x "
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@id/const_i"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -93,23 +142,46 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:hint=" vy "
-            android:inputType="numberDecimal"
-            android:textColorHint="@color/black"
-            android:background="@color/rosa"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@color/orange"
             android:textColor="@color/black"
-            android:textSize="15sp"
+            android:hint=" vy "
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@id/text_multipica_vector_one"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_potencia_vy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_10"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/text_vecto_two"
+            app:layout_constraintStart_toEndOf="@id/text_vecto_two"
+            app:layout_constraintTop_toTopOf="@id/text_vecto_two" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/tv_potencia_vy_elevation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/orange"
+            android:hint=" x "
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_potencia_vy"
+            app:layout_constraintStart_toEndOf="@id/tv_potencia_vy" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/text_multipicaca_value_vetorial_three"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
             android:text=" j "
             android:textColor="@color/black"
             android:textSize="15sp"
-            app:layout_constraintStart_toEndOf="@id/text_vecto_two"
+            app:layout_constraintStart_toEndOf="@id/tv_potencia_vy_elevation"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -117,9 +189,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/_20dp"
             android:text=" x "
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@id/text_multipicaca_value_vetorial_three"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -128,48 +201,94 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@color/orange"
             android:hint=" vz "
-            android:inputType="numberDecimal"
-            android:textColorHint="@color/black"
-            android:background="@color/rosa"
             android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@id/const_j"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_potencia_vz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_10"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/text_vecto_three"
+            app:layout_constraintStart_toEndOf="@id/text_vecto_three"
+            app:layout_constraintTop_toTopOf="@id/text_vecto_three" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/tv_potencia_vz_elevation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/orange"
+            android:hint=" x "
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_potencia_vz"
+            app:layout_constraintStart_toEndOf="@id/tv_potencia_vz" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/const_k"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
             android:text=" k "
             android:textColor="@color/black"
             android:textSize="15sp"
-            app:layout_constraintStart_toEndOf="@id/text_vecto_three"
+            app:layout_constraintStart_toEndOf="@id/tv_potencia_vz_elevation"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/text_vector_one_b"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@color/orange"
             android:hint=" bx "
-            android:inputType="numberDecimal"
-            android:textColorHint="@color/black"
-            android:background="@color/rosa"
             android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/tv_vector"
             app:layout_constraintTop_toBottomOf="@id/text_vector_one" />
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_potencia_bx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_10"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/text_vector_one_b"
+            app:layout_constraintStart_toEndOf="@id/text_vector_one_b"
+            app:layout_constraintTop_toTopOf="@id/text_vector_one_b" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/tv_potencia_bx_elevation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/orange"
+            android:hint=" x "
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_potencia_bx"
+            app:layout_constraintStart_toEndOf="@id/tv_potencia_bx" />
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/const_i_b"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
             android:text=" i "
             android:textColor="@color/black"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/text_vector_one_b"
+            app:layout_constraintStart_toEndOf="@id/tv_potencia_bx_elevation"
             app:layout_constraintTop_toBottomOf="@id/const_i" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -177,9 +296,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/_20dp"
             android:text=" x "
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/const_i_b"
             app:layout_constraintTop_toBottomOf="@id/text_multipica_vector_one" />
@@ -189,25 +309,48 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@color/orange"
             android:hint=" by "
-            android:inputType="numberDecimal"
-            android:textColorHint="@color/black"
-            android:background="@color/rosa"
             android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/text_multipica_vector_one_b"
             app:layout_constraintTop_toBottomOf="@id/text_vecto_two" />
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_potencia_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_10"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/text_vecto_two_b"
+            app:layout_constraintStart_toEndOf="@id/text_vecto_two_b"
+            app:layout_constraintTop_toTopOf="@id/text_vecto_two_b" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/tv_potencia_by_elevation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/orange"
+            android:hint=" x "
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_potencia_by"
+            app:layout_constraintStart_toEndOf="@id/tv_potencia_by" />
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/text_multipicaca_value_vetorial_three_b"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
             android:text=" j "
             android:textColor="@color/black"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/text_vecto_two_b"
+            app:layout_constraintStart_toEndOf="@id/tv_potencia_by_elevation"
             app:layout_constraintTop_toBottomOf="@id/text_multipicaca_value_vetorial_three" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -215,9 +358,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/_20dp"
             android:text=" x "
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/text_multipicaca_value_vetorial_three_b"
             app:layout_constraintTop_toBottomOf="@id/const_j" />
@@ -227,40 +371,49 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@color/orange"
             android:hint=" bz "
-            android:inputType="numberDecimal"
-            android:textColorHint="@color/black"
-            android:background="@color/rosa"
             android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/const_j_b"
             app:layout_constraintTop_toBottomOf="@id/text_vecto_three" />
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_potencia_bz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_10"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/text_vecto_three_b"
+            app:layout_constraintStart_toEndOf="@id/text_vecto_three_b"
+            app:layout_constraintTop_toTopOf="@id/text_vecto_three_b" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/tv_potencia_bz_elevation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/orange"
+            android:hint=" x "
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_potencia_bz"
+            app:layout_constraintStart_toEndOf="@id/tv_potencia_bz" />
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/const_k_b"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
             android:text=" k ) "
             android:textColor="@color/black"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/text_vecto_three_b"
+            app:layout_constraintStart_toEndOf="@id/tv_potencia_bz_elevation"
             app:layout_constraintTop_toBottomOf="@id/const_k" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_result_vector"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:textSize="15sp"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_vector_one_b"
-            tools:text="Resposta 10" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -269,10 +422,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:lines="2"
-        app:layout_constraintTop_toBottomOf="@+id/content_edit"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/orange"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_calculate_vector"
         app:layout_constraintEnd_toStartOf="@+id/bottom_calculate_vector"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_calculate_vector"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/content_edit" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bottom_calculate_vector"
@@ -284,14 +438,43 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/content_edit" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Complete os espaços destacados com os seus respectivos valores e clique em calcular"
-        android:textSize="15sp"
-        android:layout_marginBottom="@dimen/_20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_result"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:background="@drawable/shape_component_home"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_calculate_vector">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_result_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:text="@string/result"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_result_vector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_result_title"
+            tools:text="Resposta 10" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

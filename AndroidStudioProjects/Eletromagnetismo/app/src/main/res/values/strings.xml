@@ -11,8 +11,16 @@
     <string name="tv_check_type_professor">Professor</string>
     <string name="bt_start_home">avançar</string>
     <string name="tv_informative">Escolha uma modalidade para avançar</string>
-    <string name="tv_vector_calculator">Vetor: Fm = q . vetor</string>
-    <string name="tv_foce_calculator">Força magnetica: Fm = q . v . b</string>
+    <string name="tv_vector_calculator"><b>Fm = q . vetor</b></string>
+    <string name="tv_foce_calculator"><b>Fm = q . v . b</b></string>
     <string name="alert_empity_field">Campo marcado vazio</string>
     <string name="alert_not_a_number">Campo com letra</string>
+    <string name="tv_q"> q </string>
+    <string name="tv_10">.10</string>
+    <string name="tv_19">-19</string>
+    <string name="tv_x_multiplicator">x</string>
+    <string name="tv_v">v</string>
+    <string name="tv_10_twoo_multuplicator">.10</string>
+    <string name="tv_informative_rodape">Ao preencher as variáveis destacadas clique em calcular</string>
+    <string name="result">Resposta:</string>
 </resources>

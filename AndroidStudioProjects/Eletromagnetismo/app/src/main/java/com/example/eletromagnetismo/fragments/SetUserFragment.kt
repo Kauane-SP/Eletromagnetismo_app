@@ -46,7 +46,7 @@ class SetUserFragment : Fragment() {
 
     private fun initializeCheckbox() {
         checkAluno.isChecked = true
-        imgUser.load(R.drawable.ic_student)
+        imgUser.load(R.drawable.ic_reading)
         checkProfessor.isChecked = false
     }
 

@@ -1,6 +1,6 @@
 package com.example.eletromagnetismo.utils
 
-object VerifyFields{
+object VerifyFields {
 
     fun fieldsForcaEmpity(
         q: String,
@@ -9,34 +9,34 @@ object VerifyFields{
         pv: String,
         b: String,
         pb: String
-    ):Boolean{
+    ): Boolean {
         return (
                 q.isNotEmpty() &&
-                pq.toString().isNotEmpty() &&
-                v.isNotEmpty() &&
-                pv.isNotEmpty() &&
-                b.isNotEmpty() &&
-                pb.isNotEmpty()
+                        pq.toString().isNotEmpty() &&
+                        v.isNotEmpty() &&
+                        pv.isNotEmpty() &&
+                        b.isNotEmpty() &&
+                        pb.isNotEmpty()
                 )
     }
 
     fun fieldsVetorEmpity(
-        carga: Double,
-        _vx: Double,
-        _vy: Double,
-        _vz: Double,
-        _bx: Double,
-        _by: Double,
-        _bz: Double
-    ):Boolean{
+        carga: String,
+        _vx: String,
+        _vy: String,
+        _vz: String,
+        _bx: String,
+        _by: String,
+        _bz: String
+    ): Boolean {
         return (
                 carga.toString().isNotEmpty() &&
-                _vx.toString().isNotEmpty() &&
-                _vy.toString().isNotEmpty() &&
-                _vz.toString().isNotEmpty() &&
-                _bx.toString().isNotEmpty() &&
-                _by.toString().isNotEmpty() &&
-                _bz.toString().isNotEmpty()
+                        _vx.toString().isNotEmpty() &&
+                        _vy.toString().isNotEmpty() &&
+                        _vz.isNotEmpty() &&
+                        _bx.toString().isNotEmpty() &&
+                        _by.toString().isNotEmpty() &&
+                        _bz.toString().isNotEmpty()
                 )
     }
 }

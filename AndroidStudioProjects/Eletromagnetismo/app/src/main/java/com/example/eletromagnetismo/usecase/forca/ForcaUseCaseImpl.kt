@@ -1,5 +1,6 @@
 package com.example.eletromagnetismo.usecase.forca
 
+import java.text.DecimalFormat
 import kotlin.math.pow
 
 class ForcaUseCaseImpl : ForcaUseCase {
@@ -11,6 +12,8 @@ class ForcaUseCaseImpl : ForcaUseCase {
         b: String,
         pb: String
     ) :Double {
-        return ((q.toDouble())* 10.0.pow(pq.toDouble())) * (v.toDouble() * b.toDouble()) * 10.0.pow(pv.toDouble() + pb.toDouble())
+        val result =  ((q.toDouble())* 10.0.pow(pq.toDouble())) * (v.toDouble() * b.toDouble()) * 10.0.pow(pv.toDouble() + pb.toDouble())
+
+        return result.toDouble()
     }
 }

@@ -53,7 +53,7 @@ class Forca : Fragment() {
             val pb = potencialCampoEletrico.text.toString()
 
             if(VerifyFields.fieldsForcaEmpity(q,pq,v,pv,b,pb)){
-                result.text = useCase.calcularForca(q,pq,v,pv,b,pb).toString().replace("E",".10^")
+                result.text = useCase.calcularForca(q,pq,v,pv,b,pb).toString().replace("E","10^")
             }else{
                 txtAlert.text = getString(R.string.alert_empity_field)
             }
